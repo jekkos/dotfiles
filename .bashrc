@@ -2,6 +2,18 @@
 # off by default to not distract the user: the focus in a terminal window
 # should be on the output of commands, not on the prompt
 #force_colored_prompt=yes
+VIDEO_DIR=/volume1/backup/video/mount/runwalk-video/video
+MEDIA_DIR=/volume1/web/media
+
+function convert_video 
+{
+ local dest=$MEDIA_DIR/$(date +"%Y-%m-%d")
+ mkdir -p $dest 
+ find $VIDEO_DIR -name "$@" -type f -print0 | while read -r -d $'\0' file; do 
+  ffmpeg -i "$file" -vf 'hflip,vflip,scale=360:-1' -sameq $dest/$(basename "$file" | cut -d. -f1).mp4 & 
+  wait $! 
+ done
+}
 
 if [ -n "$force_color_prompt" ]; then
  if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
