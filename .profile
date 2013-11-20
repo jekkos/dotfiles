@@ -1,32 +1,27 @@
+# ~/.profile: executed by the command interpreter for login shells.
+# This file is not read by bash(1), if ~/.bash_profile or ~/.bash_login
+# exists.
+# see /usr/share/doc/bash/examples/startup-files for examples.
+# the files are located in the bash-doc package.
 
-umask 022
+# the default umask is set in /etc/profile; for setting the umask
+# for ssh logins, install and configure the libpam-umask package.
+#umask 022
 
-PATH=/opt/bin:/opt/sbin:/opt/local/v4l-utils:/sbin:/bin:/usr/sbin:/usr/bin:/usr/syno/sbin:/usr/syno/bin:/usr/local/sbin:/usr/local/bin
+# if running bash
+if [ -n "$BASH_VERSION" ]; then
+    # include .bashrc if it exists
+    if [ -f "$HOME/.bashrc" ]; then
+	. "$HOME/.bashrc"
+    fi
+fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
+JAVA_HOME=/usr/lib/jvm/jdk1.7.0_45
+PATH=$PATH:$HOME/bin:$JAVA_HOME/bin
+export JAVA_HOME
 export PATH
-
-#This fixes the backspace when telnetting in.
-#if [ "$TERM" != "linux" ]; then
-#        stty erase
-#fi
-
-HOME=/root
-export HOME
-
-TERM=${TERM:-cons25}
-export TERM
-
-PAGER=more
-export PAGER
-
-LANG=en_US.UTF-8
-LC_ALL=en_US.UTF-8
-export LANG LC_ALL
-
-PS1="`hostname`> "
-
-alias dir="ls -al"
-alias ll="ls -la"
-
-#if [ -x /opt/bin/bash ]; then
-# exec '/opt/bin/bash'
-#fi
