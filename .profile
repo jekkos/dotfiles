@@ -9,7 +9,7 @@ export PATH
 #        stty erase
 #fi
 
-HOME=/root
+HOME=/volumes1/homes/admin
 export HOME
 
 TERM=${TERM:-cons25}
