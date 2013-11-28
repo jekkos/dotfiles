@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/system/xbin/bash
 cd "$(dirname "${BASH_SOURCE}")"
 git pull origin master
 function doIt() {
