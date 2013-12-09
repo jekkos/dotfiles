@@ -5,4 +5,8 @@ if [ -f ~/.bash_aliases ]; then
     source ~/.bash_aliases
     fixterm
 fi
-export GIT_SSH=/system/xbin/ssh
+if [ -f ~/dotfiles/git_push.sh ]; then
+    cp ~/dotfiles/git_push.sh /data/local/git_push.sh
+    chmod +x /data/local/git_push.sh
+    export GIT_SSH="/data/local/git_push.sh"
+fi
