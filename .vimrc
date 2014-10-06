@@ -4,6 +4,7 @@ set term=builtin_ansi
 set clipboard=unnamedplus
 set hlsearch
 syntax on
+set number
 
 "##############################################################################                                                                         
 " Easier split navigation                                                                                                                               
