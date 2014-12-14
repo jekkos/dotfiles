@@ -1,4 +1,11 @@
+[user]
+	name = jekkos-t520
+	email = jeroen.peelaerts@gmail.com
 [core]
 	editor = vim
 [alias]
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)'
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+[diff]
+    tool = meld
+[mergetool "kdiff3"]
+    tool = kdiff3
