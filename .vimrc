@@ -1,3 +1,20 @@
+filetype off " required for multiple plugins
+filetype plugin indent on 
+
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'davidhalter/jedi-vim'
+Plugin 'klen/python-mode'
+Plugin 'christoomey/vim-tmux-navigator'
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+
 set backspace=indent,eol,start
 set whichwrap+=<,>,[,]
 set term=builtin_ansi
