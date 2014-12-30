@@ -6,4 +6,4 @@ alias sd='adb shell start ssh; \
         phablet@localhost -p 2222'
 alias buttonstoleft="dconf write /org/gnome/shell/overrides/button-layout '\"close,minimize,maximize:\"'"
 alias disablescrollbar="echo 'export LIBOVERLAY_SCROLLBAR=0' > /etc/X11/Xsession.d/80overlayscrollbars"
-
+alias downthemall="wget -r -N --no-parent --reject '*index.html*' -nH --cut-dirs=1 $0"
