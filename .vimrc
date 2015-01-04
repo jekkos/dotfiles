@@ -12,6 +12,8 @@ call vundle#begin()
 Plugin 'davidhalter/jedi-vim'
 Plugin 'klen/python-mode'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'pangloss/vim-javascript'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
