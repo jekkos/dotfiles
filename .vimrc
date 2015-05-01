@@ -13,7 +13,7 @@ Plugin 'davidhalter/jedi-vim'
 Plugin 'klen/python-mode'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'pangloss/vim-javascript'
-
+Plugin '2072/PHP-Indenting-for-VIm'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
