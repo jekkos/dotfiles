@@ -9,3 +9,4 @@ alias disablescrollbar="echo 'export LIBOVERLAY_SCROLLBAR=0' > /etc/X11/Xsession
 alias downthemall="wget -r -N --no-parent --reject '*index.html*' -nH --cut-dirs=1 $0"
 # stream scorpio from terminal
 alias scorpio="wget -O - http://193.190.253.57:8000/stream | madplay -"
+alias ohmyzsh="curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh"
