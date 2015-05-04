@@ -105,3 +105,13 @@ export KEYTIMEOUT=1
 
 bindkey '^A' beginning-of-line
 bindkey '^E' end-of-line 
+
+# suspend vi
+foreground-vi() {
+    fg %vi
+}
+zle -N foreground-vi
+bindkey '^Z' foreground-vi
+# backward search by globs
+bindkey "^R" history-incremental-pattern-search-backward
+bindkey "^S" history-incremental-pattern-search-forward
