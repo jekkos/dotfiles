@@ -11,6 +11,7 @@ call vundle#begin()
 
 Plugin 'davidhalter/jedi-vim'
 Plugin 'klen/python-mode'
+Plugin 'kien/ctrlp.vim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'pangloss/vim-javascript'
 Plugin '2072/PHP-Indenting-for-VIm'
@@ -35,3 +36,7 @@ nmap <silent> <c-k> :wincmd k<CR>
 nmap <silent> <c-j> :wincmd j<CR>                                                                                                                       
 nmap <silent> <c-h> :wincmd h<CR>                                                                                                                       
 nmap <silent> <c-l> :wincmd l<CR>
+
+" setup ctrlp for faster file navigation
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
