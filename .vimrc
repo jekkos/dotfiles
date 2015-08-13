@@ -9,6 +9,7 @@ set expandtab
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+Plugin 'altercation/vim-colors-solarized'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'klen/python-mode'
 Plugin 'kien/ctrlp.vim'
@@ -25,6 +26,8 @@ set clipboard=unnamedplus
 set hlsearch
 set number
 syntax on
+set background=dark
+colorscheme solarized
 set number
 
 "##############################################################################                                                                         
