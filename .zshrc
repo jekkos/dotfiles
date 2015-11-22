@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=~/.oh-my-zsh
+export ZSH=/home/jekkos/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -82,17 +82,6 @@ if [[ -f .bash_aliases ]]; then
     source .bash_aliases
 fi
 
-# set vim key bindings
-# bindkey -v
-
-# bindkey '^P' up-history
-# bindkey '^E' end-of-line
-# bindkey '^N' down-history
-# bindkey '^?' backward-delete-char
-# bindkey '^h' backward-delete-char
-# bindkey '^w' backward-kill-word
-# bindkey '^r' history-incremental-search-backward
-
 function zle-line-init zle-keymap-select {
     VIM_PROMPT="%{$fg_bold[yellow]%} [% NORMAL]%  %{$reset_color%}"
     RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/} $EPS1"
@@ -103,8 +92,17 @@ zle -N zle-line-init
 zle -N zle-keymap-select
 export KEYTIMEOUT=1
 
+# set vim key bindings
+bindkey -v
+
 bindkey '^A' beginning-of-line
 bindkey '^E' end-of-line 
+# bindkey '^P' up-history
+# bindkey '^N' down-history
+# bindkey '^?' backward-delete-char
+# bindkey '^h' backward-delete-char
+# bindkey '^w' backward-kill-word
+# bindkey '^r' history-incremental-search-backward
 
 # suspend vi
 foreground-vi() {
@@ -115,3 +113,6 @@ bindkey '^Z' foreground-vi
 # backward search by globs
 bindkey "^R" history-incremental-pattern-search-backward
 bindkey "^S" history-incremental-pattern-search-forward
+# enable zmv (and so we can use globbing) 
+autoload -U zmv
+alias mmv='noglob zmv -W'
