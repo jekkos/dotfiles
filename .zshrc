@@ -83,15 +83,17 @@ if [[ -f .bash_aliases ]]; then
 fi
 
 # set vim key bindings
-# bindkey -v
+bindkey -v
+export KEYTIMEOUT=1
 
-# bindkey '^P' up-history
-# bindkey '^E' end-of-line
-# bindkey '^N' down-history
-# bindkey '^?' backward-delete-char
-# bindkey '^h' backward-delete-char
-# bindkey '^w' backward-kill-word
-# bindkey '^r' history-incremental-search-backward
+bindkey '^A' beginning-of-line
+bindkey '^P' up-history
+bindkey '^E' end-of-line
+bindkey '^N' down-history
+bindkey '^?' backward-delete-char
+bindkey '^h' backward-delete-char
+bindkey '^w' backward-kill-word
+bindkey '^r' history-incremental-search-backward
 
 function zle-line-init zle-keymap-select {
     VIM_PROMPT="%{$fg_bold[yellow]%} [% NORMAL]%  %{$reset_color%}"
@@ -101,9 +103,7 @@ function zle-line-init zle-keymap-select {
 
 zle -N zle-line-init
 zle -N zle-keymap-select
-export KEYTIMEOUT=1
 
-bindkey '^A' beginning-of-line
 bindkey '^E' end-of-line 
 
 # suspend vi

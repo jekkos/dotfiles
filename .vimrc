@@ -26,9 +26,7 @@ set clipboard=unnamedplus
 set hlsearch
 set number
 syntax on
-set background=dark
-colorscheme solarized
-set number
+set background=light
 
 "##############################################################################                                                                         
 " Easier split navigation                                                                                                                               
