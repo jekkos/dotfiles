@@ -88,9 +88,6 @@ function zle-line-init zle-keymap-select {
     zle reset-prompt
 }
 
-zle -N zle-line-init
-zle -N zle-keymap-select
-export KEYTIMEOUT=1
 
 # set vim key bindings
 bindkey -v
@@ -105,6 +102,10 @@ bindkey '^E' end-of-line
 # bindkey '^r' history-incremental-search-backward
 
 # suspend vi
+zle -N zle-line-init
+zle -N zle-keymap-select
+export KEYTIMEOUT=1
+
 foreground-vi() {
     fg %vi
 }
