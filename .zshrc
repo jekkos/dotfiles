@@ -45,12 +45,9 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git grunt ant adb bower mvn mosh node npm ubuntu tmux vimode dirhistory)
+plugins=(git vimode dirhistory)
 
 # User configuration
-
-export PATH="/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/jekkos/bin:/usr/lib/jvm/jdk1.7.0_45/bin:/home/jekkos/bin:/usr/lib/jvm/jdk1.7.0_45/bin"
-# export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -83,15 +80,15 @@ if [[ -f .bash_aliases ]]; then
 fi
 
 # set vim key bindings
-# bindkey -v
+bindkey -v
 
-# bindkey '^P' up-history
-# bindkey '^E' end-of-line
-# bindkey '^N' down-history
-# bindkey '^?' backward-delete-char
+bindkey '^P' up-history
+bindkey '^E' end-of-line
+bindkey '^N' down-history
+bindkey '^?' backward-delete-char
 # bindkey '^h' backward-delete-char
 # bindkey '^w' backward-kill-word
-# bindkey '^r' history-incremental-search-backward
+bindkey '^r' history-incremental-search-backward
 
 function zle-line-init zle-keymap-select {
     VIM_PROMPT="%{$fg_bold[yellow]%} [% NORMAL]%  %{$reset_color%}"
