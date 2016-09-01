@@ -10,4 +10,4 @@ alias downthemall="wget -r -N --no-parent --reject '*index.html*' -nH --cut-dirs
 # stream scorpio from terminal
 alias scorpio="wget -O - http://193.190.253.57:8000/stream | madplay -"
 alias ohmyzsh="curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh"
-alias buttonstoleftgnome="gsettings set org.gnome.desktop.wm.preferences button-layout 'close,minimize,maximize:' && gsettings set org.gnome.settings-daemon.plugins.xsettings overrides \"{'Gtk/DecorationLayout':<'close,minimize,maximize:'>}"
+alias buttonstoleftgnome="gsettings set org.gnome.desktop.wm.preferences button-layout 'close,minimize,maximize:' && gsettings set org.gnome.settings-daemon.plugins.xsettings overrides \"{'Gtk/DecorationLayout':<'close,minimize,maximize:'>}\""
