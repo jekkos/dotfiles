@@ -41,3 +41,5 @@ nmap <silent> <c-l> :wincmd l<CR>
 " setup ctrlp for faster file navigation
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+" add force save
+cmap w!! w !sudo tee > /dev/null %
