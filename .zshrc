@@ -45,7 +45,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git vimode ant adb bower mvn mosh ubuntu tmux dirhistory docker)
+plugins=(git grunt ant adb bower mvn mosh node npm ubuntu tmux vimode dirhistory)
 
 # User configuration
 
@@ -117,7 +117,5 @@ bindkey "^S" history-incremental-pattern-search-forward
 # enable zmv (and so we can use globbing) 
 autoload -U zmv
 alias mmv='noglob zmv -W'
-
-autoload edit-command-line
-zle -N edit-command-line
+# enable vim line edit
 bindkey -M vicmd v edit-command-line
