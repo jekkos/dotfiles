@@ -8,8 +8,8 @@ set expandtab
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'itchyny/lightline.vim'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'klen/python-mode'
 Plugin 'kien/ctrlp.vim'
@@ -24,6 +24,11 @@ set whichwrap+=<,>,[,]
 set term=builtin_ansi
 set clipboard=unnamedplus
 set hlsearch
+set showcmd
+set showmode
+set showmatch
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
 set number
 syntax on
 set background=light
@@ -41,5 +46,3 @@ nmap <silent> <c-l> :wincmd l<CR>
 " setup ctrlp for faster file navigation
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
-" add force save
-cmap w!! w !sudo tee > /dev/null %
