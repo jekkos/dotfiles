@@ -11,11 +11,14 @@ call vundle#begin()
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'itchyny/lightline.vim'
 Plugin 'davidhalter/jedi-vim'
+Plugin 'junegunn/fzf.vim'
 Plugin 'klen/python-mode'
 Plugin 'kien/ctrlp.vim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'pangloss/vim-javascript'
 Plugin '2072/PHP-Indenting-for-VIm'
+Plugin 'tpope/vim-surround'
+Bundle 'edkolev/tmuxline.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
@@ -42,6 +45,8 @@ nmap <silent> <c-k> :wincmd k<CR>
 nmap <silent> <c-j> :wincmd j<CR>                                                                                                                       
 nmap <silent> <c-h> :wincmd h<CR>                                                                                                                       
 nmap <silent> <c-l> :wincmd l<CR>
+map  <silent> <c-w> <Plug>(expand_region_expand)
+map  <silent> <c-W> <Plug>(expand_region_shrink)
 
 " setup ctrlp for faster file navigation
 let g:ctrlp_map = '<c-p>'
