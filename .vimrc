@@ -18,6 +18,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'pangloss/vim-javascript'
 Plugin '2072/PHP-Indenting-for-VIm'
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
 Bundle 'edkolev/tmuxline.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
