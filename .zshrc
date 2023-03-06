@@ -119,3 +119,6 @@ autoload -U zmv
 alias mmv='noglob zmv -W'
 # enable vim line edit
 bindkey -M vicmd v edit-command-line
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -d ~/.fonts ] && source ~/.fonts/*.sh
