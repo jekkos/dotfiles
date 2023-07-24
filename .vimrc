@@ -5,15 +5,17 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
+set encoding=utf-8
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'itchyny/lightline.vim'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'junegunn/fzf.vim'
 Plugin 'klen/python-mode'
 Plugin 'kien/ctrlp.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'pangloss/vim-javascript'
 Plugin '2072/PHP-Indenting-for-VIm'
@@ -23,6 +25,8 @@ Plugin 'tpope/vim-solidity'
 Bundle 'edkolev/tmuxline.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
+
+let g:airline#extensions#tabline#enabled = 1
 
 set backspace=indent,eol,start
 set whichwrap+=<,>,[,]

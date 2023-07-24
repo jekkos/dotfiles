@@ -1,2 +1,12 @@
 bind generic <Ctrl-f> scroll-page-down
 bind generic <Ctrl-b> scroll-page-up
+
+bind diff H !sh -c "tig \"$(git rev-parse --show-toplevel)/%(file)\""
+bind status H !sh -c "tig \"$(git rev-parse --show-toplevel)/%(file)\""
+bind status a !git commit --amend --no-edit
+bind status P !git push origin %(repo:head)
+bind status 0 !git push -f origin %(repo:head)
+bind refs P !?git push %(remote) %(branch)
+bind refs 0 !?git push -f %(remote) %(branch)
+bind tree C !?git checkout %(commit) %(file)
+bind main ! !?git revert %(commit)
